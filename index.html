@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Synap Editor</title>
+
+    <link rel='stylesheet' href="synapeditor.min.css" type="text/css">
+    <script src="synapeditor.min.js"></script>
+    <script src="mathType/wirisplugin-generic.js"></script>
+    <script src="mathType/index.js"></script>
+
+    <script>
+        function initEditor() {
+        new SynapEditor('synapEditor', {
+            'editor.license': {
+                "company": "synapsoft",
+                "key": [
+                    "U2FsdGVkX18y50M1Lcbhf+FWY/uk6Ao14PUoxxXT68R15ZiDjFLFukCMwLxupdpy/g+2fLg9QGNhCbabJ2cQ0pQXqYYBBJza9EjBYYzgiR3uB+gd3uIX5hTKdbRMrFaTDc9lihvpiThe518ptdPMA6+ARDF8cn32d6Po3i3V6PyuMKrvDOzqZF8UHsN9DFv+"
+                ]
+            },
+            'editor.toolbar': [
+                'new', 'open', 'template', 'layout', '|',
+                'contentsProperties', '|',
+                'undo', 'redo', '|',
+                'copy', 'cut', 'paste', '|',
+                'link', 'unlink', 'bookmark', '|',
+                'image', 'background', 'video', 'file', '|',
+                'table', 'div', 'horizontalLine', 'quote', '|',
+                'mathType.math', 'mathType.chem', '-',
+                'paragraphStyleWithText', '|',
+                'fontFamilyWithText', '|',
+                'fontSizeWithText', '|',
+                'bold', 'italic', 'underline', 'strike', '|',
+                'growFont', 'shrinkFont', '|',
+                'fontColor', 'fontBackgroundColor', '|',
+                'bulletList', 'numberedList', 'multiLevelList', '|',
+                'align', '|',
+                'lineHeight', '|',
+                'decreaseIndent', 'increaseIndent'
+            ],
+            'editor.size.height': '400px',
+            'mathType.config': {
+                'properties': {
+                    'integrationParameters': { 'editorParameters': { language: 'en' } },
+                    // 'configurationService': '/pluginwiris_engine/app/configurationjs'
+                }
+            }
+        });
+    }
+    </script>
+</head>
+<body onload="initEditor()">
+    <div id="synapEditor"></div>
+</body>
+</html>
